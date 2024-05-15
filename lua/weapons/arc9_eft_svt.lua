@@ -355,6 +355,11 @@ local path2 = "weapons/darsu_eft/svt/fire/"
 local pathak = "weapons/darsu_eft/ak/"
 local pathsks = "weapons/darsu_eft/sks/"
 
+SWEP.ShootPitchVariation = 0
+SWEP.DistantShootVolume = 0.05
+SWEP.DistantShootVolumeActual = 0.05
+
+
 SWEP.ShootSound = { path2 .. "avt_outdoor_close_loop1.ogg", path2 .. "avt_outdoor_close_loop2.ogg", path2 .. "avt_outdoor_close_loop3.ogg", path2 .. "avt_outdoor_close_loop4.ogg" }
 SWEP.LayerSound = path2 .. "avt_outdoor_close_loopt.ogg"
 
