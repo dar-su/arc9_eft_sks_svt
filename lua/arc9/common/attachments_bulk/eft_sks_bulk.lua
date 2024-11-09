@@ -587,6 +587,13 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
     },
+    {
+        PrintName = "B Tactical",
+        Category = {"eft_tactical", "eft_tactical_top", "eft_bipod"},
+        Pos = Vector(-9.65, 0, 0.85),
+        Ang = Angle(0, 0, 180),
+        Icon_Offset = Vector(0, 0, 0),
+    },
 }
 
 
