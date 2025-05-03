@@ -5,24 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-ARC9:AddPhrase("eft_weapon_sks", "TOZ SKS", "en")
-ARC9:AddPhrase("eft_weapon_sks", "ТОЗ СКС", "ru")
-ARC9:AddPhrase("eft_weapon_sks", "TOww SKS >w<", "uwu")
-ARC9:AddPhrase("eft_weapon_opsks", "Molot OP-SKS", "en")
-ARC9:AddPhrase("eft_weapon_opsks", "Молот ОП-СКС", "ru")
-ARC9:AddPhrase("eft_weapon_opsks", "Mowot OWO-SKS", "uwu")
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_sks")
-SWEP.Description = [[A Soviet semi-automatic carbine designed by Sergei Simonov for 7.62x39 cartridges and known abroad as SKS-45. Immensely popular both in CIS countries and in the West, this weapon is still in active service in some countries in form of various copies and modifications. This particular model comes from extended storage warehouses of Tula Arms Plant and haven't yet undergone the civilian weapon normalization procedure.]]
+SWEP.Description = "eft_weapon_sks_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_carb")
+SWEP.Class = "eft_class_weapon_carb"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_carb")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tula"),
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "7.62x39mm",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ussr"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1949"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_tula",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_762x39",
+    ["eft_trivia_act3"] = "eft_trivia_act_gas",
+    ["eft_trivia_country4"] = "eft_trivia_country_ussr",
+    ["eft_trivia_year5"] = "1949"
 }
 
 SWEP.StandardPresets = {
@@ -180,21 +174,13 @@ SWEP.ShellSounds = ARC9EFT.Shells556
 SWEP.HookP_NameChange = function(self, name)
     local elements = self:GetElements()
 
-    if elements["eft_sks_op"] then
-        return ARC9:GetPhrase("eft_weapon_opsks")
-    else
-        return ARC9:GetPhrase("eft_weapon_sks")
-    end
+    if elements["eft_sks_op"] then return ARC9:GetPhrase("eft_weapon_opsks") end
 end
 
 SWEP.HookP_DescriptionChange = function(self, desc)
     local elements = self:GetElements()
 
-    if elements["eft_sks_op"] then
-        return [[The Molot OP-SKS Carbine is designed for loading with 7,62x39 — the most popular ammunition. The weight and dimensions make the carbine ergonomic for shooters of any age and height. It has been used for all types of traditional Russian hunting for more than 50 years. Tested on predators in Africa, Southeast Asia, Central America, Middle East.]]
-    else
-        return [[A Soviet semi-automatic carbine designed by Sergei Simonov for 7.62x39 cartridges and known abroad as SKS-45. Immensely popular both in CIS countries and in the West, this weapon is still in active service in some countries in form of various copies and modifications. This particular model comes from extended storage warehouses of Tula Arms Plant and haven't yet undergone the civilian weapon normalization procedure.]]
-    end
+    if elements["eft_sks_op"] then return "eft_weapon_opsks_desc" end
 end
 
 ------------------------- |||           Sounds            ||| -------------------------

@@ -5,21 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-ARC9:AddPhrase("eft_weapon_svt", "Tokarev SVT-40", "en")
-ARC9:AddPhrase("eft_weapon_svt", "Токарев СВТ-40", "ru")
-ARC9:AddPhrase("eft_weapon_svt", "Tokawew SWT-40", "uwu")
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_svt")
-SWEP.Description = [[The SVT-40 was the only mass-produced personal weapon in the early years of WW2, before the mass production of submachine guns began. The soldiers affectionately called this rifle "Sveta". When "Sveta" went to the troops, it turned out that not all Red Army soldiers were able to truly master this weapon. The SVT was best used by marine infantry units and snipers. The production of SVT-40 continued until the end of the war, and this semi-automatic rifle made an important contribution to the overall victory.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_svt40")
+SWEP.Description = "eft_weapon_svt40_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_carb")
+SWEP.Class = "eft_class_weapon_carb"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_carb")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tula"),
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "7.62x54mmR",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ussr"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1940"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_tula",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_762x54",
+    ["eft_trivia_act3"] = "eft_trivia_act_gas",
+    ["eft_trivia_country4"] = "eft_trivia_country_ussr",
+    ["eft_trivia_year5"] = "1940"
 }
 
 SWEP.StandardPresets = false 
